@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for blog in objectList %}
+{#        <li><a href="/blogs/{{ blog.slug }}">{{blog.title}}</a></li>#}
+        <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Comic Sans MS'">{{ blog.title }}</h5>
+                <p class="card-text" style="font-family: 'Comic Sans MS'">{{ blog.slug }}</p>
+                <a href="/blogs/{{ blog.slug }}" class="btn btn-primary" style="font-family: 'Comic Sans MS'">view</a>
+              </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

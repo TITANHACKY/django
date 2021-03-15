@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>blogs</title>
+{% endblock %}
+
+{% block content %}
+    <h1 style="font-family: 'Comic Sans MS'">{{ object.title }}</h1>
+    <div style="font-family: 'Comic Sans MS'">
+        <p>{{ object.content|linebreaks }}</p>
+    </div>
+{% endblock %}
